@@ -2138,8 +2138,8 @@ function getAllPostIds() {
   return fileNames.map(fileName => {
     return {
       params: {
-        // id: fileName.replace(/\.md$/, ""),
-        id: ['rezero', 'rem']
+        id: fileName.replace(/\.md$/, "") // id:['rezero','rem']
+
       }
     };
   });

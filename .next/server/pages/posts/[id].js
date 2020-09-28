@@ -2071,8 +2071,8 @@ function getAllPostIds() {
   return fileNames.map(fileName => {
     return {
       params: {
-        // id: fileName.replace(/\.md$/, ""),
-        id: ['rezero', 'rem']
+        id: fileName.replace(/\.md$/, "") // id:['rezero','rem']
+
       }
     };
   });
@@ -2316,7 +2316,7 @@ function Post({
   })));
 }
 async function getStaticPaths() {
-  const paths = Object(_lib_posts__WEBPACK_IMPORTED_MODULE_4__[/* getAllPostIds */ "a"])();
+  const paths = await Object(_lib_posts__WEBPACK_IMPORTED_MODULE_4__[/* getAllPostIds */ "a"])();
   return {
     paths,
     fallback: false
